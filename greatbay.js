@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-var mysql = require("mysql");
+
+const mysql = require("mysql");
+const inquirer = require("inquirer");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -19,8 +20,7 @@ connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
 });
-=======
-const inquirer = require("inquirer");
+
 
 function promptUser() {
     return inquirer.prompt([
@@ -60,4 +60,3 @@ function createItem() {
   
     console.log(query.sql);
   }
->>>>>>> 4ea8f55e2a280d1ecafc559fb490e8b2118ec17d
